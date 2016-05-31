@@ -12,7 +12,7 @@ while read  nom description commande; do # process file by file
     Z+=("$i")
 done < config
 
-file="/root/tmp/config"
+file="/home/$USER/config"
 FILE=$(dialog   --backtitle "Netunicum Bastion Service"  --title "Vers quel host souhaitez-vous vous connecter?" --cancel-label "Quitter" --ok-label "Connexion" --menu "Valider votre choix" 24 80 17 "${W[@]}" 3>&2 2>$fichtemp 1>&3)
 valret=$?
 DIALOG_CANCEL=1
